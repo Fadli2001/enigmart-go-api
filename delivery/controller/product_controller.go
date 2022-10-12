@@ -67,7 +67,7 @@ func (p *ProductController) DeleteProduct(ctx *gin.Context) {
 			"message": "OK",
 		})
 	} else {
-		ctx.JSON(http.StatusBadGateway, gin.H{
+		ctx.JSON(http.StatusBadRequest, gin.H{
 			"message": "id tidak ditemukan",
 		})
 	}

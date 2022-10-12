@@ -34,8 +34,6 @@ func (p *productRepository) Update(newProduct *model.Product)model.Product{
 		if p.db[i].Id == newProduct.Id {
 			p.db[i] = *newProduct
 			productRes = p.db[i]
-		}else{
-			productRes = model.Product{}
 		}
 	}
 	return productRes
